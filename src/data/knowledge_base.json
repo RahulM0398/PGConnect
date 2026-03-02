@@ -1,0 +1,870 @@
+[
+    {
+        "id": "health-general",
+        "category": "Health",
+        "title": "General Health Department Info",
+        "keywords": [
+            "health department",
+            "clinic",
+            "immunization",
+            "flu shot",
+            "vaccine",
+            "health officer",
+            "medical",
+            "public health"
+        ],
+        "description": "Public health services, clinics, and immunizations.",
+        "severity": "Low",
+        "chat_response": "I can help guide you to the right health resources.",
+        "steps": [
+            "Check the Health Department website for clinic hours.",
+            "Call to make appointments for immunizations.",
+            "Review available health forms online."
+        ],
+        "contacts": [
+            {
+                "name": "Health Department",
+                "phone": "301-883-7879",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/health",
+                "description": "General Information / Health Officer",
+                "when_to_use": "Use for clinic appointments or public health questions."
+            },
+            {
+                "name": "Health Forms",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/permitting-inspections-and-enforcement/about-dpie/resources/forms-checklists/health-forms",
+                "description": "Download Forms"
+            }
+        ],
+        "emergency_notice": "Call 911 for medical emergencies."
+    },
+    {
+        "id": "social-services",
+        "category": "Health",
+        "title": "Department of Social Services (DSS)",
+        "keywords": [
+            "dss",
+            "social services",
+            "welfare",
+            "snap",
+            "food stamps",
+            "benefits",
+            "assistance",
+            "case worker",
+            "food help",
+            "utility help"
+        ],
+        "description": "Assistance with food, energy bills, housing, and other social safety net programs.",
+        "severity": "High",
+        "chat_response": "There are local options for emergency food and help with utility bills, plus longer-term benefits you can apply for.",
+        "steps": [
+            "Apply for benefits via MyMDThink.",
+            "Contact DSS for emergency food or cash assistance.",
+            "Gather ID, proof of income, and residency documents."
+        ],
+        "contacts": [
+            {
+                "name": "MyMDThink Portal",
+                "url": "https://mymdthink.maryland.gov/home/#/",
+                "description": "Apply for Benefits Online"
+            },
+            {
+                "name": "Dept of Social Services",
+                "phone": "301-909-7000",
+                "email": "pgcdss@dhr.state.md.us",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/social-services",
+                "description": "Director: Jennifer Amaya Thompson",
+                "when_to_use": "General info, benefits application, family services"
+            },
+            {
+                "name": "Abuse Reporting Hotline",
+                "phone": "301-909-2450",
+                "description": "24/7 Child/Vulnerable Adult Protection",
+                "when_to_use": "Report suspected abuse or neglect"
+            }
+        ],
+        "emergency_notice": "For immediate child/vulnerable adult abuse danger, call 911."
+    },
+    {
+        "id": "homeless-services",
+        "category": "Emergencies",
+        "title": "Homeless Services / Emergency Shelter",
+        "keywords": [
+            "homeless",
+            "shelter",
+            "sleeping in car",
+            "evicted",
+            "housing crisis",
+            "no place to sleep",
+            "need shelter tonight"
+        ],
+        "description": "Emergency shelter and homelessness prevention services.",
+        "severity": "Critical",
+        "chat_response": "You should connect with the local homeless services system to locate shelter or housing assistance.",
+        "steps": [
+            "Call the Homeless Hotline (24/7) for emergency shelter.",
+            "Be prepared to share family details for intake.",
+            "Call early in the day for better availability.",
+            "Ask about prevention programs if not yet homeless."
+        ],
+        "contacts": [
+            {
+                "name": "Homeless Hotline",
+                "phone": "1-888-731-0999",
+                "description": "24/7 Emergency Shelter Intake",
+                "when_to_use": "Call immediately if you need shelter tonight"
+            },
+            {
+                "name": "Homeless Services Info",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/social-services/services/homeless-services",
+                "description": "Service Details & Resources"
+            },
+            {
+                "name": "Intake Forms",
+                "url": "https://forms.gle/sCVAdEqBwwV1Wpbf6",
+                "description": "Pre-Intake Form"
+            }
+        ],
+        "emergency_notice": "Call 1-888-731-0999 directly for shelter intake."
+    },
+    {
+        "id": "police",
+        "category": "Emergencies",
+        "title": "Police Department (PGPD)",
+        "keywords": [
+            "police",
+            "crime",
+            "theft",
+            "assault",
+            "robbery",
+            "officer",
+            "report crime",
+            "break in",
+            "stolen"
+        ],
+        "description": "Law enforcement services for crimes and public safety.",
+        "severity": "Critical",
+        "chat_response": "If a crime is happening right now or anyone is in immediate danger, call 911 immediately.",
+        "steps": [
+            "If the crime is in progress, call 911.",
+            "For past crimes, file a report online or call non-emergency.",
+            "Have incident details ready (date, time, location, description)."
+        ],
+        "contacts": [
+            {
+                "name": "Emergency (911)",
+                "phone": "911",
+                "description": "Crimes in Progress / Life/Safety Threat",
+                "when_to_use": "Use for any crime happening right now"
+            },
+            {
+                "name": "Non-Emergency Dispatch",
+                "phone": "301-352-1200",
+                "description": "Past Crimes / Noise / Non-Urgent",
+                "when_to_use": "Use for non-urgent police matters"
+            },
+            {
+                "name": "File Online Report",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/police/online-services/file-police-report-online",
+                "description": "Online Reporting Portal"
+            },
+            {
+                "name": "Police Department",
+                "email": "Police_CustServ@co.pg.md.us",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/police",
+                "description": "General Information"
+            }
+        ],
+        "emergency_notice": "Call 911 for crimes in progress."
+    },
+    {
+        "id": "fire-ems",
+        "category": "Emergencies",
+        "title": "Fire & EMS",
+        "keywords": [
+            "fire",
+            "smoke",
+            "gas leak",
+            "ambulance",
+            "medical emergency",
+            "ems",
+            "paramedic",
+            "carbon monoxide"
+        ],
+        "description": "Fire suppression and emergency medical services.",
+        "severity": "Critical",
+        "chat_response": "If you smell gas, see smoke, or there's a fire, get to safety first and call 911 immediately.",
+        "steps": [
+            "Evacuate immediately if there is fire or gas.",
+            "Call 911 from a safe location.",
+            "Do not re-enter the building."
+        ],
+        "contacts": [
+            {
+                "name": "Emergency (911)",
+                "phone": "911",
+                "description": "Fire/Medical/Gas Emergencies",
+                "when_to_use": "Any fire, medical emergency, or gas leak"
+            },
+            {
+                "name": "Admin (Non-Emergency)",
+                "phone": "301-883-5200",
+                "description": "Chief Thelmetria Michaelides - Administrative"
+            },
+            {
+                "name": "Fire & EMS Department",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/fire-emergency-medical-services",
+                "description": "Department Info & Resources"
+            }
+        ],
+        "emergency_notice": "Call 911 for fire, medical emergencies, or gas leaks."
+    },
+    {
+        "id": "mental-health-crisis",
+        "category": "Health",
+        "title": "Mental Health Crisis / Crisis Response",
+        "keywords": [
+            "crisis",
+            "mental health",
+            "suicide",
+            "breakdown",
+            "behavioral health",
+            "emotional distress",
+            "want to hurt myself"
+        ],
+        "description": "Immediate support for mental health crises and emotional distress.",
+        "severity": "Critical",
+        "chat_response": "I'm really glad you reached out. Support is available, and you don't have to go through this alone.",
+        "steps": [
+            "If immediate danger to life, call 911.",
+            "For crisis support, call 988 or the local Mobile Crisis Team.",
+            "Stay with the person if safe to do so.",
+            "Text 988 if you prefer text over voice."
+        ],
+        "contacts": [
+            {
+                "name": "988 Suicide & Crisis Lifeline",
+                "phone": "988",
+                "url": "https://988lifeline.org/",
+                "description": "24/7 National Support",
+                "when_to_use": "Call or text if feeling emotionally overwhelmed or in crisis"
+            },
+            {
+                "name": "Local Mobile Crisis Team",
+                "phone": "301-429-2185",
+                "description": "County Crisis Response",
+                "when_to_use": "Local mental health crisis team"
+            },
+            {
+                "name": "PG County Behavioral Health",
+                "phone": "301-583-5920",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/health/behavioral-health-services",
+                "description": "Mental Health Programs & Referrals"
+            }
+        ],
+        "emergency_notice": "Call 911 if there is an immediate threat to life."
+    },
+    {
+        "id": "foodborne-illness",
+        "category": "Health",
+        "title": "Foodborne Illness / Food Poisoning",
+        "keywords": [
+            "food poisoning",
+            "foodborne illness",
+            "restaurant complaint",
+            "ate bad food",
+            "vomiting",
+            "diarrhea",
+            "stomach cramps",
+            "sick from food"
+        ],
+        "description": "Report suspected food poisoning or unsafe food handling.",
+        "severity": "Medium",
+        "chat_response": "That sounds uncomfortable. Most cases improve, but it's important to watch for warning signs.",
+        "steps": [
+            "Stay hydrated and rest.",
+            "Seek medical care if symptoms are severe.",
+            "Report suspected outbreaks to Health Dept."
+        ],
+        "contacts": [
+            {
+                "name": "Food Safety Program",
+                "phone": "301-883-7690",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/health/food-safety",
+                "description": "Report Illness / Food Safety",
+                "when_to_use": "Report suspected food poisoning or food safety violations"
+            },
+            {
+                "name": "MD Dept of Health",
+                "url": "https://health.maryland.gov/phpa/OEHFP/Pages/foodcontrol.aspx",
+                "description": "State Food Control Resources"
+            }
+        ],
+        "emergency_notice": "Call 911 if symptoms are severe (dehydration, bloody diarrhea)."
+    },
+    {
+        "id": "civic-311",
+        "category": "General Queries",
+        "title": "County 311 / General Services",
+        "keywords": [
+            "311",
+            "community relations",
+            "complaint",
+            "service request",
+            "ticket",
+            "missed trash",
+            "pothole",
+            "tall grass",
+            "general information"
+        ],
+        "description": "Primary entry point for most non-emergency county services and complaints.",
+        "severity": "Low",
+        "chat_response": "Thanks for letting me know. Issues like missed trash or recycling pickup can usually be resolved quickly.",
+        "steps": [
+            "Identify the specific issue.",
+            "Visit the PGC311 Customer Portal or call 311.",
+            "Search for your issue type and submit a request.",
+            "Save your ticket number for follow-up."
+        ],
+        "contacts": [
+            {
+                "name": "PGC311 Portal",
+                "url": "https://pgc311.com/customer/s/",
+                "description": "Submit Service Request Online"
+            },
+            {
+                "name": "Call 311",
+                "phone": "311",
+                "description": "Or 301-883-4748 (7am-7pm)",
+                "when_to_use": "Non-emergency county issues: potholes, missed trash, code enforcement"
+            },
+            {
+                "name": "Email",
+                "email": "311onthego@co.pg.md.us",
+                "description": "311 Email Contact"
+            },
+            {
+                "name": "Department Website",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/community-relations/pgc311",
+                "description": "More Info"
+            }
+        ],
+        "emergency_notice": "Use for non-emergency county issues only."
+    },
+    {
+        "id": "trash-recycling",
+        "category": "Civic",
+        "title": "Trash, Recycling, or Bulk Pickup Issues",
+        "keywords": [
+            "trash",
+            "recycling",
+            "bulk pickup",
+            "missed collection",
+            "garbage",
+            "waste"
+        ],
+        "description": "Missed trash or recycling collection, bulk item pickup requests.",
+        "severity": "Low",
+        "chat_response": "Thanks for letting me know. Issues like missed trash or recycling pickup can usually be resolved quickly.",
+        "steps": [
+            "Confirm your collection day and ensure items are at curb.",
+            "Report through County 311 (phone or online).",
+            "Provide your address and what was missed."
+        ],
+        "contacts": [
+            {
+                "name": "Department of the Environment",
+                "phone": "311",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/environment",
+                "description": "Waste Management Services",
+                "when_to_use": "Report missed collections or request bulk pickup"
+            }
+        ],
+        "emergency_notice": null
+    },
+    {
+        "id": "roads-potholes",
+        "category": "Civic",
+        "title": "Roads, Potholes, and Streetlight Issues",
+        "keywords": [
+            "pothole",
+            "road damage",
+            "streetlight out",
+            "traffic signal",
+            "road hazard",
+            "street repair"
+        ],
+        "description": "Potholes, damaged roads, malfunctioning streetlights, or traffic signal issues.",
+        "severity": "Medium",
+        "chat_response": "I can help you report that. Road and streetlight issues are handled by county transportation services.",
+        "steps": [
+            "Note the exact location (address or nearest intersection).",
+            "Take photos if possible.",
+            "Report through County 311."
+        ],
+        "contacts": [
+            {
+                "name": "Dept of Public Works & Transportation",
+                "phone": "311",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/public-works-transportation",
+                "description": "Road Maintenance & Traffic",
+                "when_to_use": "Report potholes, streetlights, traffic signals"
+            }
+        ],
+        "emergency_notice": "If road hazard causes immediate danger, call 911."
+    },
+    {
+        "id": "noise-property",
+        "category": "Civic",
+        "title": "Noise, Property, or Neighborhood Complaints",
+        "keywords": [
+            "noise complaint",
+            "loud neighbors",
+            "abandoned property",
+            "tall grass",
+            "code violation",
+            "zoning",
+            "trash in yard",
+            "property maintenance"
+        ],
+        "description": "Noise complaints, abandoned properties, code violations, or neighborhood disturbances.",
+        "severity": "Medium",
+        "chat_response": "That can definitely be frustrating. The county has a process to handle neighborhood and property-related concerns.",
+        "steps": [
+            "Report the issue through PGC311.",
+            "Use non-emergency police for active noise (party, music).",
+            "Provide address and description of issue."
+        ],
+        "contacts": [
+            {
+                "name": "DPIE Code Enforcement",
+                "phone": "311",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/permitting-inspections-enforcement",
+                "description": "Property/Zoning/Code Violations",
+                "when_to_use": "Code enforcement, property maintenance, zoning concerns"
+            },
+            {
+                "name": "Police Non-Emergency",
+                "phone": "301-352-1200",
+                "description": "Active Noise/Disturbance",
+                "when_to_use": "If noise or disturbance is happening right now"
+            }
+        ],
+        "emergency_notice": null
+    },
+    {
+        "id": "permits-licenses",
+        "category": "Civic",
+        "title": "Permits, Licenses, and Inspections",
+        "keywords": [
+            "building permit",
+            "business license",
+            "inspection",
+            "rental license",
+            "construction permit",
+            "dpie",
+            "permit status"
+        ],
+        "description": "Building permits, business licenses, inspections, and permit status questions.",
+        "severity": "Low",
+        "chat_response": "I can point you to the right place. Permits and inspections are handled by a specific county department.",
+        "steps": [
+            "Check permit requirements online.",
+            "Apply via DPIE.",
+            "Schedule inspections through the automated system."
+        ],
+        "contacts": [
+            {
+                "name": "DPIE Permits",
+                "phone": "301-636-2000",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/permitting-inspections-enforcement",
+                "description": "Permits & Licenses",
+                "when_to_use": "Apply for permits, schedule inspections, check status"
+            }
+        ],
+        "emergency_notice": null
+    },
+    {
+        "id": "property-tax",
+        "category": "Civic",
+        "title": "Property Taxes, Billing, and Fees",
+        "keywords": [
+            "property tax",
+            "tax bill",
+            "pay taxes",
+            "assessment",
+            "finance department",
+            "tax payment",
+            "billing"
+        ],
+        "description": "Property tax bills, assessments, and payments.",
+        "severity": "Low",
+        "chat_response": "Billing and tax questions are common, and there's a county office that can help clarify this for you.",
+        "steps": [
+            "View and pay bills online.",
+            "Contact Finance for assessment questions."
+        ],
+        "contacts": [
+            {
+                "name": "Department of Finance",
+                "phone": "301-952-3700",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/finance",
+                "description": "Tax & Billing",
+                "when_to_use": "Property tax questions, payments, assessments"
+            }
+        ],
+        "emergency_notice": null
+    },
+    {
+        "id": "cyber-phishing",
+        "category": "IT/Cybersecurity Related",
+        "title": "Phishing Email / Government Impersonation",
+        "keywords": [
+            "phishing",
+            "scam email",
+            "impersonation",
+            "fake government",
+            "suspicious link",
+            "click link",
+            "email scam",
+            "fake email",
+            "spam",
+            "scammer"
+        ],
+        "description": "Emails pretending to be from a trusted organization to trick you into sharing info.",
+        "severity": "High",
+        "chat_response": "Thanks for checking before clicking. Messages like this are very common scams, and catching it early really matters.",
+        "steps": [
+            "Do not click on any links or attachments.",
+            "Do not reply to the email.",
+            "Report it using the contacts below."
+        ],
+        "contacts": [
+            {
+                "name": "FTC Report Fraud",
+                "url": "https://reportfraud.ftc.gov/",
+                "phone": "1-877-382-4357",
+                "description": "Federal Trade Commission",
+                "when_to_use": "Report any phishing or scam attempt, even if no money was lost"
+            },
+            {
+                "name": "FBI IC3",
+                "url": "https://www.ic3.gov/",
+                "description": "Internet Crime Complaint Center",
+                "when_to_use": "Use if you clicked a link, shared credentials, or lost money"
+            }
+        ],
+        "emergency_notice": "If you shared passwords, change them immediately."
+    },
+    {
+        "id": "cyber-hacked",
+        "category": "IT/Cybersecurity Related",
+        "title": "Account Compromise / Hacked Account",
+        "keywords": [
+            "hacked",
+            "account compromised",
+            "password changed",
+            "login alert",
+            "unauthorized access",
+            "cant login",
+            "locked out",
+            "account stolen",
+            "hacker"
+        ],
+        "description": "Unauthorized access to your online accounts.",
+        "severity": "High",
+        "chat_response": "That's scary to deal with, but acting quickly can stop things from getting worse.",
+        "steps": [
+            "Change your password immediately.",
+            "Turn on multi-factor authentication.",
+            "Review login activity.",
+            "Report to FBI IC3."
+        ],
+        "contacts": [
+            {
+                "name": "FBI IC3",
+                "url": "https://www.ic3.gov/",
+                "description": "Internet Crime Complaint Center",
+                "when_to_use": "Report here if your account was taken over or money was involved"
+            },
+            {
+                "name": "FTC Report Fraud",
+                "url": "https://reportfraud.ftc.gov/",
+                "description": "Federal Trade Commission",
+                "when_to_use": "Use for broader fraud or identity-related reporting"
+            }
+        ],
+        "emergency_notice": null
+    },
+    {
+        "id": "cyber-identity-theft",
+        "category": "IT/Cybersecurity Related",
+        "title": "Identity Theft / Personal Data Exposure",
+        "keywords": [
+            "identity theft",
+            "stolen identity",
+            "fake account",
+            "credit fraud",
+            "ssn stolen",
+            "data breach",
+            "social security number",
+            "fraud",
+            "credit card theft"
+        ],
+        "description": "Someone is using your personal information without permission.",
+        "severity": "High",
+        "chat_response": "I know this can feel overwhelming, but there are clear steps that can help you recover and protect yourself.",
+        "steps": [
+            "Start recovery at IdentityTheft.gov.",
+            "Place fraud alerts on credit reports.",
+            "Monitor financial accounts closely."
+        ],
+        "contacts": [
+            {
+                "name": "IdentityTheft.gov",
+                "url": "https://www.identitytheft.gov/",
+                "phone": "1-877-438-4338",
+                "description": "FTC Identity Theft Recovery",
+                "when_to_use": "Use immediately to begin identity recovery steps"
+            },
+            {
+                "name": "FBI IC3",
+                "url": "https://www.ic3.gov/",
+                "description": "Report Financial Loss",
+                "when_to_use": "Use if the identity theft involved online crime or financial loss"
+            }
+        ],
+        "emergency_notice": null
+    },
+    {
+        "id": "cyber-ransomware",
+        "category": "IT/Cybersecurity Related",
+        "title": "Ransomware / Malware Infection",
+        "keywords": [
+            "ransomware",
+            "malware",
+            "virus",
+            "files locked",
+            "ransom payment",
+            "computer virus",
+            "infected",
+            "hacked computer",
+            "cyber attack"
+        ],
+        "description": "Software that locks your files/system and demands payment.",
+        "severity": "High",
+        "chat_response": "This is a serious situation, but paying the ransom usually makes things worse. Reporting quickly is the right move.",
+        "steps": [
+            "Disconnect device from the internet.",
+            "Do NOT pay the ransom.",
+            "Report to CISA and FBI IC3.",
+            "Preserve evidence if possible."
+        ],
+        "contacts": [
+            {
+                "name": "CISA Incident Reporting",
+                "url": "https://www.cisa.gov/reporting-cyber-incident",
+                "description": "Cybersecurity & Infrastructure Security Agency",
+                "when_to_use": "Use for guidance and reporting ransomware incidents"
+            },
+            {
+                "name": "FBI IC3",
+                "url": "https://www.ic3.gov/",
+                "description": "Report Cyber Crime",
+                "when_to_use": "Use to report ransomware or financial loss"
+            }
+        ],
+        "emergency_notice": null
+    },
+    {
+        "id": "cyber-sextortion",
+        "category": "IT/Cybersecurity Related",
+        "title": "Personal Images Leak / Sextortion",
+        "keywords": [
+            "sextortion",
+            "leaked images",
+            "blackmail",
+            "intimate photos",
+            "extortion",
+            "nudes",
+            "revenge porn",
+            "exposing photos",
+            "threatening to share"
+        ],
+        "description": "Threats to share private images unless money is paid.",
+        "severity": "High",
+        "chat_response": "I'm really sorry you're dealing with this. You're not alone, and help is available. The most important thing is not to engage or pay.",
+        "steps": [
+            "Do NOT pay or respond.",
+            "Save evidence (screenshots, messages, usernames).",
+            "Report immediately using the contacts below."
+        ],
+        "contacts": [
+            {
+                "name": "FBI Sextortion Help",
+                "url": "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/sextortion",
+                "description": "FBI Assistance",
+                "when_to_use": "Use immediately if someone is threatening to leak images"
+            },
+            {
+                "name": "FBI IC3",
+                "url": "https://www.ic3.gov/",
+                "description": "Report Crime",
+                "when_to_use": "Use if money was demanded or accounts were compromised"
+            },
+            {
+                "name": "NCMEC CyberTipline",
+                "url": "https://report.cybertip.org/",
+                "description": "National Center for Missing & Exploited Children",
+                "when_to_use": "MANDATORY if a minor is involved"
+            }
+        ],
+        "emergency_notice": "Do not pay. It usually leads to more demands."
+    },
+    {
+        "id": "poison-control",
+        "category": "Emergencies",
+        "title": "Poisoning / Overdose / Toxic Exposure",
+        "keywords": [
+            "poison",
+            "overdose",
+            "toxic",
+            "swallowed",
+            "ingestion",
+            "chemical exposure",
+            "medication overdose"
+        ],
+        "description": "Possible poisoning, medication overdose, or chemical exposure.",
+        "severity": "Critical",
+        "chat_response": "If someone is unconscious, not breathing, seizing, or in immediate danger, call 911 now. Otherwise, Poison Control can guide you immediately.",
+        "steps": [
+            "Call Poison Control immediately for guidance.",
+            "Have the substance container ready if possible.",
+            "Call 911 if unconscious, not breathing, or seizing."
+        ],
+        "contacts": [
+            {
+                "name": "Poison Control",
+                "phone": "1-800-222-1222",
+                "url": "https://www.mdpoison.com/contact/",
+                "description": "Maryland Poison Center",
+                "when_to_use": "Immediate poisoning/exposure guidance when not already in critical distress"
+            },
+            {
+                "name": "Emergency (911)",
+                "phone": "911",
+                "description": "Critical Symptoms",
+                "when_to_use": "If symptoms are severe (unconscious, not breathing, seizures)"
+            }
+        ],
+        "emergency_notice": "Call 911 if unconscious, not breathing, or having seizures."
+    },
+    {
+        "id": "abuse-reporting",
+        "category": "Emergencies",
+        "title": "Report Suspected Abuse or Neglect",
+        "keywords": [
+            "abuse",
+            "neglect",
+            "child abuse",
+            "elder abuse",
+            "vulnerable adult",
+            "domestic violence",
+            "report abuse"
+        ],
+        "description": "Reporting suspected abuse or neglect of a child or vulnerable adult.",
+        "severity": "Critical",
+        "chat_response": "You can and should report suspected abuse or neglect to protect the person at risk.",
+        "steps": [
+            "If anyone is in immediate danger, call 911 right away.",
+            "If not immediate emergency, contact the abuse reporting hotline.",
+            "You do not need proof; report what you have observed.",
+            "Follow any instructions given by hotline staff."
+        ],
+        "contacts": [
+            {
+                "name": "DSS Abuse Reporting",
+                "phone": "301-909-2450",
+                "description": "24/7 Abuse/Neglect Hotline",
+                "when_to_use": "Report suspected child or vulnerable adult abuse/neglect"
+            },
+            {
+                "name": "Emergency (911)",
+                "phone": "911",
+                "description": "Immediate Danger",
+                "when_to_use": "If anyone is in immediate danger"
+            }
+        ],
+        "emergency_notice": "Call 911 if in immediate danger. Reporting in good faith is protected."
+    },
+    {
+        "id": "disaster-emergency",
+        "category": "Emergencies",
+        "title": "Disaster / Severe Weather / Emergency Management",
+        "keywords": [
+            "disaster",
+            "severe weather",
+            "flooding",
+            "storm",
+            "evacuation",
+            "shelter",
+            "emergency preparedness"
+        ],
+        "description": "County emergency management and disaster-related resources.",
+        "severity": "High",
+        "chat_response": "For immediate life-threatening emergencies, call 911. For county preparedness resources and emergency management info, you can contact the Office of Emergency Management.",
+        "steps": [
+            "For immediate danger (injury, trapped persons), call 911.",
+            "For preparedness info and county emergency management, contact OEM.",
+            "Sign up for emergency alerts."
+        ],
+        "contacts": [
+            {
+                "name": "Office of Emergency Management",
+                "phone": "301-324-4400",
+                "email": "oemstaff@co.pg.md.us",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/homeland-security/emergency-management",
+                "description": "County Emergency Management",
+                "when_to_use": "Preparedness info, disaster guidance, county emergency resources"
+            },
+            {
+                "name": "Emergency (911)",
+                "phone": "911",
+                "description": "Life-Threatening Emergencies",
+                "when_to_use": "Immediate danger (injury, trapped persons, fire)"
+            }
+        ],
+        "emergency_notice": "Call 911 for immediate life-threatening situations."
+    },
+    {
+        "id": "eviction-rent-help",
+        "category": "Civic",
+        "title": "Eviction or Rent Assistance",
+        "keywords": [
+            "eviction",
+            "rent help",
+            "behind on rent",
+            "rental assistance",
+            "court date",
+            "losing housing"
+        ],
+        "description": "Behind on rent or facing eviction - emergency assistance and legal help.",
+        "severity": "Critical",
+        "chat_response": "There are local agencies that may help with emergency rent, housing stability, and legal questions about eviction.",
+        "steps": [
+            "Gather key documents: lease, eviction notices, ID, proof of income.",
+            "Contact DSS for emergency eviction prevention and rental assistance.",
+            "Contact legal aid for housing/landlord-tenant legal questions.",
+            "If you have a court date, reach out to legal aid ASAP."
+        ],
+        "contacts": [
+            {
+                "name": "Department of Social Services",
+                "phone": "301-909-7000",
+                "url": "https://www.princegeorgescountymd.gov/departments-offices/social-services",
+                "description": "Emergency Rental Assistance",
+                "when_to_use": "Ask about emergency eviction prevention programs"
+            }
+        ],
+        "emergency_notice": "Do not ignore court notices. Seek legal aid immediately if you have a court date."
+    }
+]
