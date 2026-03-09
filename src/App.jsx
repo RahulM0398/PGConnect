@@ -82,7 +82,7 @@ function App() {
       {/* Dynamic Header */}
       <header className={`chat-header ${messages.length === 0 ? 'hero-header' : 'compact-header'}`}>
         <div className="header-content">
-          <h1>PGConnect Agent</h1>
+          <h1>GovForms</h1>
           {messages.length === 0 && <p>Your intelligent civic guide for Prince George's County.</p>}
         </div>
       </header>
