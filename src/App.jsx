@@ -4,16 +4,20 @@ import ChatInput from './components/ChatInput';
 import TypingIndicator from './components/TypingIndicator';
 import { classifyQuery } from './utils/classifier';
 import { callPerplexity } from './utils/perplexity';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Sparkles, MessageSquare, AlertCircle, HelpCircle } from 'lucide-react';
 
 const SuggestedQuery = ({ text, onClick, icon: Icon }) => (
-  <button
+  <motion.button
     onClick={() => onClick(text)}
     className="suggested-query-btn"
+    initial={{ opacity: 0, y: 12 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.4 }}
   >
     <div className="sq-icon">{Icon && <Icon size={18} />}</div>
     <span>{text}</span>
-  </button>
+  </motion.button>
 );
 
 function App() {
@@ -82,8 +86,10 @@ function App() {
       {/* Dynamic Header */}
       <header className={`chat-header ${messages.length === 0 ? 'hero-header' : 'compact-header'}`}>
         <div className="header-content">
-          <h1>PGConnect Agent</h1>
-          {messages.length === 0 && <p>Your intelligent civic guide for Prince George's County.</p>}
+          <h1>PGConnect</h1>
+          {messages.length === 0 && (
+            <p className="tagline">AI Connecting Citizens to get right Help</p>
+          )}
         </div>
       </header>
 
@@ -99,7 +105,18 @@ function App() {
             </div>
           </div>
         ) : (
-          messages.map((msg, idx) => <MessageBubble key={idx} message={msg} />)
+          <AnimatePresence initial={false}>
+            {messages.map((msg, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+              >
+                <MessageBubble message={msg} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
         )}
 
         {isLoading && <TypingIndicator />}
