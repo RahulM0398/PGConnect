@@ -103,7 +103,25 @@ body {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-bottom: 1px solid var(--border-subtle);
   position: relative;
-  z-index: 1;
+  z-index: 10;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.header-title-clickable {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  user-select: none;
+}
+
+.header-title-clickable:hover {
+  opacity: 0.8;
 }
 
 .chat-header h1 {
@@ -148,6 +166,29 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* New Chat Button */
+.new-chat-btn {
+  position: absolute;
+  left: 0;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.new-chat-btn:hover {
+  border-color: var(--md-gold);
+  color: var(--md-gold);
+  background: var(--bg-surface-hover);
 }
 
 .compact-header {
@@ -687,6 +728,204 @@ body {
   }
 }
 
+/* ─── Follow-up Suggestions ─── */
+.followup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 0.25rem;
+}
+
+.followup-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.followup-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.followup-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.55rem 1rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.followup-chip:hover {
+  border-color: var(--md-gold);
+  color: var(--md-gold);
+  background: var(--bg-surface-hover);
+}
+
+.followup-chip svg {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.followup-chip:hover svg {
+  color: var(--md-gold);
+}
+
+/* ─── Profile Menu ─── */
+.profile-menu-wrapper {
+  position: absolute;
+  right: 0;
+}
+
+.profile-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-btn:hover {
+  border-color: var(--md-gold);
+  color: var(--md-gold);
+  background: var(--bg-surface-hover);
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 280px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 100;
+  animation: dropdownIn 0.2s ease;
+}
+
+@keyframes dropdownIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.profile-dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--md-gold);
+  letter-spacing: 0.06em;
+}
+
+.dropdown-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  transition: color 0.2s;
+}
+
+.dropdown-close:hover {
+  color: var(--text-primary);
+}
+
+.profile-dropdown-body {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.service-login-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 0.75rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all 0.15s ease;
+}
+
+.service-login-item:hover {
+  background: var(--bg-surface-hover);
+}
+
+.service-login-item svg {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.service-login-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.service-login-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.service-login-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.profile-dropdown-footer {
+  padding: 0.5rem 0.75rem 0.75rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.county-portal-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.65rem 0.75rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--md-gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+.county-portal-link:hover {
+  background: rgba(212, 175, 55, 0.08);
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 640px) {
   .suggestions-grid {
@@ -707,5 +946,17 @@ body {
 
   .chat-input-container {
     padding: 0.75rem 1rem 1rem;
+  }
+
+  .followup-chips {
+    flex-direction: column;
+  }
+
+  .followup-chip {
+    white-space: normal;
+  }
+
+  .profile-dropdown {
+    width: 260px;
   }
 }

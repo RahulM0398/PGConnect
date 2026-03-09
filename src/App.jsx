@@ -2,27 +2,71 @@ import React, { useState, useRef, useEffect } from 'react';
 import MessageBubble from './components/MessageBubble';
 import ChatInput from './components/ChatInput';
 import TypingIndicator from './components/TypingIndicator';
+import ProfileMenu from './components/ProfileMenu';
 import { classifyQuery } from './utils/classifier';
 import { callPerplexity } from './utils/perplexity';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Sparkles, MessageSquare, AlertCircle, HelpCircle } from 'lucide-react';
+import { Sparkles, MessageSquare, AlertCircle, HelpCircle, Plus, ChevronRight } from 'lucide-react';
 
-const SuggestedQuery = ({ text, onClick, icon: Icon }) => (
+// Follow-up suggestions mapped by category
+const FOLLOW_UP_MAP = {
+  'Health': [
+    "How do I apply for Medicaid?",
+    "Where is the nearest county clinic?",
+    "How do I get a flu shot?"
+  ],
+  'Emergencies': [
+    "How do I file a police report?",
+    "Where can I find emergency shelter?",
+    "How do I report a gas leak?"
+  ],
+  'IT/Cybersecurity Related': [
+    "How do I report identity theft?",
+    "What should I do if I was hacked?",
+    "How to protect my accounts?"
+  ],
+  'Civic': [
+    "How do I get a building permit?",
+    "Where do I pay my property taxes?",
+    "How do I report a pothole?"
+  ],
+  'General Queries': [
+    "How do I contact PGC311?",
+    "Where do I pay a traffic ticket?",
+    "How do I register to vote?"
+  ]
+};
+
+const SuggestedQuery = ({ text, onClick, icon: Icon, delay = 0 }) => (
   <motion.button
     onClick={() => onClick(text)}
     className="suggested-query-btn"
     initial={{ opacity: 0, y: 12 }}
     animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.4 }}
+    transition={{ duration: 0.35, delay }}
   >
     <div className="sq-icon">{Icon && <Icon size={18} />}</div>
     <span>{text}</span>
   </motion.button>
 );
 
+const FollowUpChip = ({ text, onClick }) => (
+  <motion.button
+    onClick={() => onClick(text)}
+    className="followup-chip"
+    initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.25 }}
+  >
+    <span>{text}</span>
+    <ChevronRight size={14} />
+  </motion.button>
+);
+
 function App() {
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [followUps, setFollowUps] = useState([]);
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -31,20 +75,23 @@ function App() {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages, isLoading]);
+  }, [messages, isLoading, followUps]);
+
+  const handleNewChat = () => {
+    setMessages([]);
+    setFollowUps([]);
+    setIsLoading(false);
+  };
 
   const handleSend = async (text) => {
     const userMsg = { type: 'user', text };
     setMessages(prev => [...prev, userMsg]);
     setIsLoading(true);
+    setFollowUps([]);
 
     try {
       const localResult = classifyQuery(text);
-      // Pass the current message history to Perplexity for context
       const aiResponseText = await callPerplexity(text, messages);
-
-      // Only treat as error if aiResponseText is explicitly an error message
-      const isActualError = !aiResponseText || aiResponseText.includes("I encountered an error") || aiResponseText.includes("unable to access");
 
       let systemMsg = {
         type: 'system',
@@ -69,11 +116,20 @@ function App() {
       }
 
       setMessages(prev => [...prev, systemMsg]);
+
+      // Generate follow-up suggestions based on response category
+      const category = systemMsg.data?.category || 'General Queries';
+      const suggestions = FOLLOW_UP_MAP[category] || FOLLOW_UP_MAP['General Queries'];
+      // Pick 2 random suggestions from the category that aren't the current query
+      const filtered = suggestions.filter(s => s.toLowerCase() !== text.toLowerCase());
+      const picked = filtered.sort(() => 0.5 - Math.random()).slice(0, 2);
+      setFollowUps(picked);
+
     } catch (error) {
       console.error("Error:", error);
       setMessages(prev => [...prev, {
         type: 'system',
-        text: "I encountered a connection error. Please try again.",
+        text: "",
         data: null
       }]);
     } finally {
@@ -83,10 +139,24 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* Dynamic Header */}
+      {/* Header */}
       <header className={`chat-header ${messages.length === 0 ? 'hero-header' : 'compact-header'}`}>
         <div className="header-content">
-          <h1>PGConnect</h1>
+          <div className="header-row">
+            {messages.length > 0 && (
+              <motion.button
+                className="new-chat-btn"
+                onClick={handleNewChat}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                title="New Chat"
+              >
+                <Plus size={18} />
+              </motion.button>
+            )}
+            <h1 onClick={handleNewChat} className="header-title-clickable">PGConnect</h1>
+            <ProfileMenu />
+          </div>
           {messages.length === 0 && (
             <p className="tagline">AI Connecting Citizens to get right Help</p>
           )}
@@ -98,10 +168,10 @@ function App() {
         {messages.length === 0 ? (
           <div className="empty-state">
             <div className="suggestions-grid">
-              <SuggestedQuery text="I received a phishing email" onClick={handleSend} icon={AlertCircle} />
-              <SuggestedQuery text="Report a missed trash pickup" onClick={handleSend} icon={MessageSquare} />
-              <SuggestedQuery text="Where can I get mental health help?" onClick={handleSend} icon={Sparkles} />
-              <SuggestedQuery text="How do I file a police report?" onClick={handleSend} icon={HelpCircle} />
+              <SuggestedQuery text="I received a phishing email" onClick={handleSend} icon={AlertCircle} delay={0} />
+              <SuggestedQuery text="Report a missed trash pickup" onClick={handleSend} icon={MessageSquare} delay={0.08} />
+              <SuggestedQuery text="Where can I get mental health help?" onClick={handleSend} icon={Sparkles} delay={0.16} />
+              <SuggestedQuery text="How do I file a police report?" onClick={handleSend} icon={HelpCircle} delay={0.24} />
             </div>
           </div>
         ) : (
@@ -120,6 +190,24 @@ function App() {
         )}
 
         {isLoading && <TypingIndicator />}
+
+        {/* Follow-up suggestions */}
+        {!isLoading && followUps.length > 0 && (
+          <motion.div
+            className="followup-container"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+          >
+            <span className="followup-label">Related questions</span>
+            <div className="followup-chips">
+              {followUps.map((text, idx) => (
+                <FollowUpChip key={idx} text={text} onClick={handleSend} />
+              ))}
+            </div>
+          </motion.div>
+        )}
+
         <div ref={messagesEndRef} />
       </div>
 

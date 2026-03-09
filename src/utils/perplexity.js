@@ -108,7 +108,7 @@ export const callPerplexity = async (query, conversationHistory = []) => {
         if (!response.ok) {
             const err = await response.text();
             console.error("Perplexity API Error:", err);
-            return "I'm having trouble connecting to the network right now. Please try again in a moment.";
+            return "";
         }
 
         const json = await response.json();
@@ -116,6 +116,6 @@ export const callPerplexity = async (query, conversationHistory = []) => {
 
     } catch (error) {
         console.error("Perplexity Call Failed:", error);
-        return "I encountered an error processing your request.";
+        return "";
     }
 };

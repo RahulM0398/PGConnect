@@ -19,7 +19,7 @@ const MessageBubble = ({ message }) => {
                     </div>
                     <div className="system-msg-content">
                         <div className="message-bubble system">
-                            <p>{message.text}</p>
+                            {message.text && <p>{message.text}</p>}
                             {message.data && <ActionCard data={message.data} />}
                         </div>
                     </div>
